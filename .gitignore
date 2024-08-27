@@ -1,0 +1,9 @@
+datasets
+models
+trajectories
+logs
+formatted
+wandb
+.idea
+yml
+__pycache__
