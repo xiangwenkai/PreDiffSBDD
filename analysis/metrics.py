@@ -35,7 +35,10 @@ class CategoricalDistribution:
 def rdmol_to_smiles(rdmol):
     mol = Chem.Mol(rdmol)
     Chem.RemoveStereochemistry(mol)
-    mol = Chem.RemoveHs(mol)
+    try:
+        mol = Chem.RemoveHs(mol)
+    except:
+        print("remove H error")
     return Chem.MolToSmiles(mol)
 
 

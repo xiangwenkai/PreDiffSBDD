@@ -425,18 +425,21 @@ if __name__ == '__main__':
     summary_string += f"'atom_hist': {atom_hist}\n"
     summary_string += f"'aa_hist': {aa_hist}\n"
     summary_string += f"'n_nodes': {n_nodes.tolist()}\n"
+    summary_string += f"'count_protein': {count_protein}\n"
+    summary_string += f"'count_ligand': {count_ligand}\n"
+    summary_string += f"'count_total': {count_total}\n"
 
-    sns.distplot(count_protein)
-    plt.savefig(processed_dir / 'protein_size_distribution.png')
-    plt.clf()
-
-    sns.distplot(count_ligand)
-    plt.savefig(processed_dir / 'lig_size_distribution.png')
-    plt.clf()
-
-    sns.distplot(count_total)
-    plt.savefig(processed_dir / 'total_size_distribution.png')
-    plt.clf()
+    # sns.distplot(count_protein)
+    # plt.savefig(processed_dir / 'protein_size_distribution.png')
+    # plt.clf()
+    #
+    # sns.distplot(count_ligand)
+    # plt.savefig(processed_dir / 'lig_size_distribution.png')
+    # plt.clf()
+    #
+    # sns.distplot(count_total)
+    # plt.savefig(processed_dir / 'total_size_distribution.png')
+    # plt.clf()
 
     # Write summary to text file
     with open(processed_dir / 'summary.txt', 'w') as f:
